@@ -1,0 +1,470 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;  /* Позволяет не превысить заданные высоту и ширину объекта */
+}
+
+ul {
+    margin: 0;
+    list-style : none; /* Убрать маркеры(выколотые кружки) перед текстом в ссылках */
+    padding: 0;
+}
+
+li {
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313; 
+}
+
+.container {
+    max-width: 1220px; /* Задается максимальное значение для всех мониторов, при этом минимальное остается плавающим для маленьких мониторов */
+    padding: 0 10px; /* Внутренний отступ с ДВУХ сторон, т.е. 10+10=20px */
+    margin: 0 auto; /* 0 auto - выравнивает по центру */
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    margin-right: 70px;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item + .menu__item { /* Позволяет добавить промежуток между параметров[кроме первого параметра](просто padding-left/right , margin - работали бы не корректно */
+    padding-left: 10px;
+}
+
+.menu__link {
+    text-transform: uppercase; /* Задается капсовый текст */
+    padding: 42px 20px;
+    transition: all .3s; /* Добавляет плавность анимации при наведении */
+}
+
+.menu__link:hover { /* hover - При наведении меняется цвет элементов */
+    background-color: #131313;
+    color: white;
+}
+
+.bike__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    color: #131313;
+    margin: 60px 0 5px;
+}
+
+.bike__subtitle {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: #6F6F6F;
+    margin: 0 0 60px;
+}
+
+.bike__text { /* nado 4ekat6 */
+    max-width: 420px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+    margin-bottom: 20px;
+}
+
+.bike__link {
+    margin-top: 80px;
+    display: inline-block;
+    background-color: #131313;
+    color: #fff;
+    padding: 28px 70px 28px 81px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 1.1em; /* Расстояние между буквами */
+    transform: all .3s;
+}
+
+.bike__link:hover {
+    background-color: #FF4040;
+}
+
+.bike {
+    padding: 97px 0 150px;
+}
+
+.bike__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bike__column_slider {
+    flex-basis: 630px;
+    margin-left: 30px;
+    max-width: 630px;
+}
+
+.bike-slider, .slick-dots {
+    right: 0;
+    top: 50px;
+}
+
+.slick-dots {
+    position: absolute;
+}
+
+.slick-dots li + li {
+    padding-top: 10px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    padding: 0;
+    border:  none;
+    background: #131313;
+    height: 25px;
+    width: 2px;
+    border-radius: 7px;
+    cursor: pointer; /* Добавляет курсор при наведении на кнопку */
+    transition: all .3s;
+}
+
+.slick-dots button:hover,
+.slick-active button{
+    background-color: #ff4040;
+}
+
+.bike__list {
+    margin-top: 50px; /* вместо 20 (подогнал) для отображения текста под картинку  */
+    display: flex;
+    justify-content: space-around;
+}
+
+.bike__list-item {
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 58px;
+}
+
+.bike__list-num {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.bike__list-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    margin: auto 0; 
+}
+
+.info {
+    margin-bottom: 150px;
+}
+
+.info__inner {
+    display: flex;
+}
+
+.info__img {
+    margin-right: 60px;
+    flex-basis: 570px;
+    object-fit: cover; /* Улучшает растягивание картинки */
+}
+
+.info__list {
+    flex-basis: 490px;
+}
+
+.info__item + .info__item {
+    padding-top: 50px;
+}
+
+.info__item-title {
+    height: 19px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    text-transform: uppercase ;
+    margin: 0 0 10px;
+}
+
+.info__item-text {
+    max-width: 450px;
+}
+
+.characteristics {
+    margin-bottom: 150px;
+}
+
+.characteristics__head {
+    text-transform: uppercase;
+    margin: 0 0 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #131313;
+}
+
+.characteristics__inner {
+    display: flex;
+}
+
+.characteristics__img {
+    align-self: center;
+}
+
+.characteristics__items {
+    flex-basis: 570px;
+    margin-right: 60px;
+}
+
+.characteristics__list + .characteristics__list{
+    padding-top: 30px;
+}
+
+.characteristics__title {
+    padding: 2px 0 3px;
+    text-transform: uppercase; /* Капс для текста */
+    background-color: #131313;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.characteristics__line {
+    display: flex;
+    padding-top: 5px;
+}
+
+.characteristics__name {
+    flex-basis: 285px;
+    padding-right: 25px;
+}
+
+.characteristics__discr {
+    flex-basis: 285px;
+}
+
+.slider {
+    margin-bottom: 50px;
+}
+
+.slider__items .slick-dots {
+    top: 0;
+    left: 0;
+}
+
+.slider__item {
+    padding-left: 50px;
+}
+
+.price {
+    margin-bottom: 100px;
+}
+
+.price__inner {
+    position: relative;
+}
+
+.form {
+    max-width: 420px;
+}
+
+.form__title {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.form__text {
+    margin-bottom: 30px;
+    max-width: 300px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+} 
+
+.font__input-name,
+.font__input-phone {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #131313;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.font__input-name::placeholder,
+.font__input-phone::placeholder,
+.form__input-text {
+    color: #6F6F6F;
+    opacity: 0.5;
+}
+
+.form__input-text {
+    margin-bottom: 10px;
+}
+
+.form__label-box {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.form__label + form__label {
+    margin-left: 23px;
+}
+
+.form__input-radio {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form__input-radio:checked + .form__bike {
+    display: block;
+}
+
+.form__bike {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-bottom: 100px;
+}
+
+.form__bike-price {
+    font-size: 32px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 220px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #FF4040;
+    border-radius: 60%;
+    transform: translateX(-50%); /* Смещение по оси Х */
+}
+
+.form__bike-price::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 100px;
+    border: 1px solid #FF4040;
+    border-radius: 60%;   
+    top: 12px;
+    left: 0;
+    right: 0;
+}
+
+.form__radio-style {
+    width: 80px;
+    height: 12px;
+    border-radius: 100px;
+}
+
+.form__radio-style-grey {
+    background-color: #6F6F6F;
+}
+
+.form__radio-style-white {
+    background-color: #FFFFFF;
+    border: 2px solid #6F6F6F;
+}
+
+.form__radio-style-red {
+    background-color: #FF4040;
+}
+
+.form__btn {
+    background-color: #131313;
+    padding: 28px 70px 28px 81px;
+    border: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 1.1em;
+    cursor: pointer;
+    margin-bottom: 100px;
+    transition: all .3s;
+}
+
+.form__btn:hover {
+    background-color:#FF4040;
+}
+
+.footer {
+    background-color: #131313;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.footer__link {
+    text-transform: lowercase;
+    text-decoration: underline;
+    width: 185px;
+    height: 15px;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.footer__social-link + .footer__social-link {
+    margin-left: 28px;
+}
+
+.footer__contacts {
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.footer__contacts-link {
+    display: flex;
+    align-items: center; 
+}
+
+.footer__contacts-link + .footer__contacts-link {
+    margin-top: 10px;
+}
+
+.footer__contacts-img { /* Надо править расположение иконок слева от текста */
+    margin-right: 10px;
+}
